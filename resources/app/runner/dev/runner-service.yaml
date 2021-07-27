@@ -4,12 +4,11 @@ metadata:
   name: runner-service
   labels:
     name: runner-service
-  namespace: app
 spec:
   type: NodePort
   ports:
     - port: 8888
       nodePort: 30036
-      name: tcp
+      protocol: TCP
   selector:
     name: runner-app

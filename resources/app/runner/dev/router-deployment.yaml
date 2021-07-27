@@ -4,7 +4,6 @@ metadata:
   labels:
     app: router-app
   name: router-app
-  namespace: app
 spec:
   replicas: 1
   selector:

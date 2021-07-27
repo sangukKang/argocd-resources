@@ -4,7 +4,6 @@ metadata:
   labels:
     app: runner-app
   name: runner-app
-  namespace: app
 spec:
   replicas: 1
   selector:
