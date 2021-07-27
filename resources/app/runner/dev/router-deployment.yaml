@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: router-app
+  name: router-app
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: router-app
+  template:
+    metadata:
+      labels:
+        app: router-app
+        component: hazelcast-service
+    spec:
+      imagePullSecrets:
+        - name: myregistry
+      containers:
+        - image: registry.cnakj.shop/appbricks/router:0.0.1-SNAPSHOT
+          name: router
+          ports:
+            - containerPort: 8888

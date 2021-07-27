@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: runner-app
+  name: runner-app
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: runner-app
+  template:
+    metadata:
+      labels:
+        app: runner-app
+        component: hazelcast-service
+    spec:
+      imagePullSecrets:
+        - name: myregistry
+      containers:
+        - image: registry.cnakj.shop/appbricks/runner:0.0.1-SNAPSHOT
+          name: runner
+          ports:
+            - containerPort: 8888
