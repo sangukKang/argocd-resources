@@ -11,4 +11,4 @@ spec:
       nodePort: 30036
       protocol: TCP
   selector:
-    name: runner-app
+    app: runner-app
