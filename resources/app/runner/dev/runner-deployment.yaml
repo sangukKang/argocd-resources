@@ -19,6 +19,9 @@ spec:
         - name: myregistry
       containers:
         - image: registry.cnakj.shop/appbricks/runner:0.0.1-SNAPSHOT
+          env:
+            - name: profile
+              value: "dev"
           name: runner
           ports:
             - containerPort: 8888
