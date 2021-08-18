@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
         - name: myregistry
       containers:
-        - image: registry.cnakj.shop/appbricks/runner:0.0.1-SNAPSHOT
+        - image: registry.cnakj.shop/appbricks/runner:0.0.2-SNAPSHOT
           env:
             - name: profile
               value: "dev"
