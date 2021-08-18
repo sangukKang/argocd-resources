@@ -19,6 +19,9 @@ spec:
         - name: myregistry
       containers:
         - image: registry.cnakj.shop/appbricks/router:0.0.1-SNAPSHOT
+          env:
+            - name: profile
+              value: "dev"
           name: router
           ports:
             - containerPort: 8888
