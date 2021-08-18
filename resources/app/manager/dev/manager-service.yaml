@@ -7,8 +7,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8080
-      nodePort: 30365
+    - port: 8888
+      nodePort: 30363
       protocol: TCP
   selector:
     app: manager-app
