@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: manager-app
+  name: manager-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manager-app
+  template:
+    metadata:
+      labels:
+        app: manager-app
+    spec:
+      containers:
+        - image: registry.cnakj.shop/appbricks/manager
+          name: manager
+          ports:
+            - containerPort: 8899
