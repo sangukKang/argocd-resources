@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
     - port: 8080
-      nodePort: 30365
+      nodePort: 30364
       protocol: TCP
   selector:
     app: manager-app
