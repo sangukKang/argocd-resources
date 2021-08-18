@@ -19,6 +19,7 @@ spec:
         - name: myregistry
       containers:
         - image: registry.cnakj.shop/appbricks/runner:0.0.2-SNAPSHOT
+          imagePullPolicy: Always
           env:
             - name: profile
               value: "dev"
