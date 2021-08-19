@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bz-service-app
-  name: bz-service-app
+    app: bz-app
+  name: bz-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bz-service-app
+      app: bz-app
   template:
     metadata:
       labels:
-        app: bz-service-app
+        app: bz-app
     spec:
       containers:
         - image: registry.cnakj.shop/appbricks/bz-sample-service:1.0-SNAPSHOT
           imagePullPolicy: Always
-          name: bz-service-app
+          name: bz-app
           ports:
             - containerPort: 9000
