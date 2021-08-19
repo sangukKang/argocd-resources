@@ -15,7 +15,7 @@ spec:
         app: manager-app
     spec:
       containers:
-        - image: registry.cnakj.shop/appbricks/manager:latest
+        - image: registry.cnakj.shop/appbricks/manager
           name: manager
           ports:
             - containerPort: 8222
