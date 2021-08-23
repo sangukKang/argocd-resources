@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: tester-app
+  name: tester-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tester-app
+  template:
+    metadata:
+      labels:
+        app: tester-app
+    spec:
+      containers:
+        - image: registry.cnakj.shop/appbricks/tester:1.0-SNAPSHOT
+          imagePullPolicy: Always
+          name: tester-app
+          ports:
+            - containerPort: 8080
