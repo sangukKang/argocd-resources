@@ -28,6 +28,8 @@ spec:
           env:
             - name: profile
               value: "dev"
+              name: cluster
+              value: "zookeeper"
           name: runner
           ports:
             - containerPort: 8888
