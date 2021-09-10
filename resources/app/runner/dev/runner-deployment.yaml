@@ -33,7 +33,7 @@ spec:
           name: runner
           ports:
             - name: runner-port
-            - containerPort: 8888
+              containerPort: 8888
           startupProbe:
             httpGet:
               path: /health
