@@ -32,4 +32,11 @@ spec:
               value: "zookeeper"
           name: runner
           ports:
+            - name: runner-port
             - containerPort: 8888
+          startupProbe:
+            httpGet:
+              path: /health
+              port: runner-port
+            failureThreshold: 30
+            periodSeconds: 10
