@@ -28,7 +28,7 @@ spec:
           env:
             - name: profile
               value: "dev"
-              name: cluster
+            - name: cluster
               value: "zookeeper"
           name: router
           ports:
