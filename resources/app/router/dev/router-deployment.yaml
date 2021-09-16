@@ -23,7 +23,7 @@ spec:
       imagePullSecrets:
         - name: myregistry
       containers:
-        - image: registry.cnakj.shop/appbricks/router:11
+        - image: registry.cnakj.shop/appbricks/router:13
           imagePullPolicy: Always
           env:
             - name: profile
